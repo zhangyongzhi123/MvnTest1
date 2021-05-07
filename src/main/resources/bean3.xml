@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="stu" class="ListConne.stuu">
+<!--        数组类型属性注入-->
+        <property name="courses">
+            <array>
+                <value>zz</value>
+                <value>zzz</value>
+                <value>zzzz</value>
+                <value>zzzzz</value>
+                <value>z12</value>
+            </array>
+        </property>
+
+        <!--        list类型属性注入-->
+        <property name="list">
+            <array>
+                <value>zz123</value>
+                <value>zzz123</value>
+                <value>zzzz123</value>
+                <value>zzzzz123</value>
+                <value>z12zzz</value>
+            </array>
+        </property>
+
+        <!--        map类型属性注入-->
+        <property name="map">
+            <map>
+                <entry key="zhang" value="xv"></entry>
+            </map>
+        </property>
+
+        <!--        set类型属性注入-->
+        <property name="set">
+            <set>
+                <value>Mysql</value>
+            </set>
+        </property>
+    </bean>
+</beans>

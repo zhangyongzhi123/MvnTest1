@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--配置springTest对象创建-->
+<!--    <bean id="springtest" class="springTest"></bean>-->
+
+    <!--配置的是无参构造，因为bean管理中默认就是调用指定class中的无参构造方法-->
+    <!--set方法注入属性-->
+    <bean id="springtest" class="springTest">
+        <property name="name" value="zhangyongzhi"></property>
+        <property name="zname">
+<!--            带特殊符号 ![CDATA[内容]]-->
+                  <value><![CDATA[<zhang>]]></value>
+        </property>
+<!--        <property name="zname" value="xvhuarong"></property>-->
+        <property name="home" value=""></property>
+    </bean>
+
+    <!--带参构造方法注入属性-->
+<!--    <bean id="springtest" class="springTest">-->
+<!--        <constructor-arg name="name" value="zzz"></constructor-arg>-->
+<!--        <constructor-arg name="zname" value="rrr"></constructor-arg>-->
+<!--    </bean>-->
+</beans>
